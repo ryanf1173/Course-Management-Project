@@ -1,0 +1,13 @@
+
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content%}
+    {% for post in all_courses_list %}
+        <div class="post-entry"> 
+             <h3><a href="{% url 'login' %}"></a></h3>
+              
+             <p>{{ post.body }}</p>   
+        </div>
+    {% endfor %}
+{% endblock content%}
